@@ -31,7 +31,6 @@ pip install transformers torch
 ```
 'The company announced a record-breaking quarter with huge profits.' -> Dự đoán: positive (Điểm: 0.9548)
 'Despite the merger, the stock price has fallen.' -> Dự đoán: negative (Điểm: 0.7254)
-'The report shows that the market is stable.' -> Dự đoán: positive (Điểm: 0.7772)
 ```
 ---
 
