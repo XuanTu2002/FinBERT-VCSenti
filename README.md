@@ -1,5 +1,5 @@
 # FinBERT-VCSenti: Mô Hình Phân Tích Quan Điểm Tin Tức Tài Chính
-![Link Dataset sử dụng](https://huggingface.co/datasets/atrost/financial_phrasebank)
+[Link Dataset sử dụng](https://huggingface.co/datasets/atrost/financial_phrasebank)
 ## Tổng Quan Dự Án
 
 **FinBERT-VCSenti** là một mô hình học sâu được fine-tune từ `bert-base-uncased` để phân tích và phân loại quan điểm trong các văn bản tài chính bằng tiếng Anh. Mô hình có khả năng xác định xem một câu mang sắc thái **Tích cực (positive)**, **Tiêu cực (negative)**, hay **Trung lập (neutral)**, hỗ trợ các bài toán tự động hóa trong ngành tài chính - ngân hàng.
