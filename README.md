@@ -27,16 +27,11 @@ pip install transformers torch
 
 ---
 
-**Kết quả dự kiến:**
+**Kết quả:**
 ```
-'The company's revenue grew by 25% in the last quarter.'
- -> Dự đoán: POSITIVE (Score: 0.9987)
-
-'There are concerns about the upcoming economic recession.'
- -> Dự đoán: NEGATIVE (Score: 0.9995)
-
-'The new CEO will start his position next Monday.'
- -> Dự đoán: NEUTRAL (Score: 0.9998)
+'The company announced a record-breaking quarter with huge profits.' -> Dự đoán: positive (Điểm: 0.9548)
+'Despite the merger, the stock price has fallen.' -> Dự đoán: negative (Điểm: 0.7254)
+'The report shows that the market is stable.' -> Dự đoán: positive (Điểm: 0.7772)
 ```
 ---
 
