@@ -4,7 +4,7 @@
 
 **FinBERT-VCSenti** là một mô hình học sâu được fine-tune từ `bert-base-uncased` để phân tích và phân loại quan điểm trong các văn bản tài chính bằng tiếng Anh. Mô hình có khả năng xác định xem một câu mang sắc thái **Tích cực (positive)**, **Tiêu cực (negative)**, hay **Trung lập (neutral)**, hỗ trợ các bài toán tự động hóa trong ngành tài chính - ngân hàng.
 
-[cite_start]Dự án này được thực hiện như một minh chứng về kỹ năng ứng dụng các mô hình Ngôn ngữ Lớn (LLM) vào giải quyết bài toán thực tế, lấy cảm hứng từ paper nghiên cứu **FinBERT**[Link Paper](https://arxiv.org/pdf/1908.10063)
+[cite_start]Dự án này được thực hiện như một minh chứng về kỹ năng ứng dụng các mô hình Ngôn ngữ Lớn (LLM) vào giải quyết bài toán thực tế, lấy cảm hứng từ paper nghiên cứu **FinBERT**  [Link Paper](https://arxiv.org/pdf/1908.10063)
 
 
 ---
@@ -27,35 +27,6 @@ pip install transformers torch
 
 ---
 
-## Cách Sử Dụng
-
-Bạn có thể dễ dàng sử dụng mô hình này thông qua `pipeline` của thư viện Transformers.
-
-```python
-from transformers import pipeline
-import torch
-
-# Thay 'your-huggingface-username/FinBERT-VCSenti' bằng đường dẫn model của bạn sau khi push lên Hub
-model_checkpoint = "your-huggingface-username/FinBERT-VCSenti"
-device = 0 if torch.cuda.is_available() else -1
-
-# Khởi tạo pipeline
-classifier = pipeline("text-classification", model=model_checkpoint, device=device)
-
-# Chuẩn bị câu cần dự đoán
-sentences = [
-    "The company's revenue grew by 25% in the last quarter.",
-    "There are concerns about the upcoming economic recession.",
-    "The new CEO will start his position next Monday."
-]
-
-# Thực hiện dự đoán
-results = classifier(sentences)
-for sentence, result in zip(sentences, results):
-    print(f"'{sentence}'")
-    print(f" -> Dự đoán: {result['label'].upper()} (Score: {result['score']:.4f})\n")
-
-```
 **Kết quả dự kiến:**
 ```
 'The company's revenue grew by 25% in the last quarter.'
@@ -85,8 +56,8 @@ Mô hình được huấn luyện bằng cách sử dụng `Trainer` API từ th
 
 Mô hình đạt được hiệu năng ấn tượng trên tập dữ liệu kiểm thử (validation set):
 
-* **Accuracy:** `[Điền độ chính xác bạn đạt được, ví dụ: 0.8627]`
-* **F1-Score (Weighted):** `[Điền F1-score bạn đạt được, ví dụ: 0.9044]`
+* **Accuracy:** `0.854839`
+* **F1-Score (Weighted):** `0.854946`
 
 Kết quả này cho thấy mô hình có khả năng phân loại tốt và phù hợp để triển khai vào các ứng dụng thực tế.
 
