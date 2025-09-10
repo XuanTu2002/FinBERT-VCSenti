@@ -1,6 +1,6 @@
 # FinBERT-VCSenti: Mô Hình Phân Tích Quan Điểm Tin Tức Tài Chính
 
-## 📝 Tổng Quan Dự Án
+## Tổng Quan Dự Án
 
 **FinBERT-VCSenti** là một mô hình học sâu được fine-tune từ `bert-base-uncased` để phân tích và phân loại quan điểm trong các văn bản tài chính bằng tiếng Anh. Mô hình có khả năng xác định xem một câu mang sắc thái **Tích cực (positive)**, **Tiêu cực (negative)**, hay **Trung lập (neutral)**, hỗ trợ các bài toán tự động hóa trong ngành tài chính - ngân hàng.
 
@@ -9,7 +9,7 @@
 
 ---
 
-## 🚀 Mô Tả Mô Hình
+## Mô Tả Mô Hình
 
 * **Model gốc (Base Model):** `bert-base-uncased` từ Hugging Face.
 * [cite_start]**Dataset:** Mô hình được fine-tune trên bộ dữ liệu **Financial PhraseBank** [cite: 199][cite_start], cụ thể là tập `sentences_allagree` nơi tất cả các chuyên gia tài chính đều đồng thuận về nhãn quan điểm[cite: 201].
@@ -17,7 +17,7 @@
 
 ---
 
-## 🛠️ Cài Đặt
+## Cài Đặt
 
 Để sử dụng mô hình này, bạn cần cài đặt các thư viện cần thiết:
 
@@ -27,7 +27,7 @@ pip install transformers torch
 
 ---
 
-## 💡 Cách Sử Dụng
+## Cách Sử Dụng
 
 Bạn có thể dễ dàng sử dụng mô hình này thông qua `pipeline` của thư viện Transformers.
 
@@ -69,7 +69,7 @@ for sentence, result in zip(sentences, results):
 ```
 ---
 
-## ⚙️ Quy Trình Huấn Luyện
+## Quy Trình Huấn Luyện
 
 Mô hình được huấn luyện bằng cách sử dụng `Trainer` API từ thư viện Transformers. [cite_start]Các siêu tham số (hyperparameters) chính được lựa chọn dựa trên đề xuất từ paper FinBERT[cite: 14]:
 
@@ -81,7 +81,7 @@ Mô hình được huấn luyện bằng cách sử dụng `Trainer` API từ th
 
 ---
 
-## 📊 Kết Quả Đánh Giá
+## Kết Quả Đánh Giá
 
 Mô hình đạt được hiệu năng ấn tượng trên tập dữ liệu kiểm thử (validation set):
 
@@ -92,7 +92,7 @@ Kết quả này cho thấy mô hình có khả năng phân loại tốt và ph�
 
 ---
 
-## 📚 Tài Liệu Tham Khảo
+## Tài Liệu Tham Khảo
 
 * Araci, D. (2019). *FinBERT: Financial Sentiment Analysis with Pre-trained Language Models*. [arXiv:1908.10063](https://arxiv.org/abs/1908.10063).
 * Malo, P., Sinha, A., Korhonen, P., Wallenius, J., & Takala, P. (2014). *Good debt or bad debt: Detecting semantic orientations in economic texts*. Journal of the Association for Information Science and Technology, 65(4), 782-796.
