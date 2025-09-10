@@ -4,7 +4,7 @@
 
 **FinBERT-VCSenti** là một mô hình học sâu được fine-tune từ `bert-base-uncased` để phân tích và phân loại quan điểm trong các văn bản tài chính bằng tiếng Anh. Mô hình có khả năng xác định xem một câu mang sắc thái **Tích cực (positive)**, **Tiêu cực (negative)**, hay **Trung lập (neutral)**, hỗ trợ các bài toán tự động hóa trong ngành tài chính - ngân hàng.
 
-[cite_start]Dự án này được thực hiện như một minh chứng về kỹ năng ứng dụng các mô hình Ngôn ngữ Lớn (LLM) vào giải quyết bài toán thực tế, lấy cảm hứng từ paper nghiên cứu **FinBERT**  [Link Paper](https://arxiv.org/pdf/1908.10063)
+Dự án này được thực hiện như một minh chứng về kỹ năng ứng dụng các mô hình Ngôn ngữ Lớn (LLM) vào giải quyết bài toán thực tế, lấy cảm hứng từ paper nghiên cứu **FinBERT**  [Link Paper](https://arxiv.org/pdf/1908.10063)
 
 
 ---
@@ -12,7 +12,7 @@
 ## Mô Tả Mô Hình
 
 * **Model gốc (Base Model):** `bert-base-uncased` từ Hugging Face.
-* [cite_start]**Dataset:** Mô hình được fine-tune trên bộ dữ liệu **Financial PhraseBank** [cite: 199][cite_start], cụ thể là tập `sentences_allagree` nơi tất cả các chuyên gia tài chính đều đồng thuận về nhãn quan điểm[cite: 201].
+* **Dataset:** Mô hình được fine-tune trên bộ dữ liệu **Financial PhraseBank** , cụ thể là tập `sentences_allagree` nơi tất cả các chuyên gia tài chính đều đồng thuận về nhãn quan điểm.
 * **Bài toán:** Phân loại văn bản (Text Classification) với 3 nhãn: `positive`, `negative`, `neutral`.
 
 ---
@@ -36,13 +36,13 @@ pip install transformers torch
 
 ## Quy Trình Huấn Luyện
 
-Mô hình được huấn luyện bằng cách sử dụng `Trainer` API từ thư viện Transformers. [cite_start]Các siêu tham số (hyperparameters) chính được lựa chọn dựa trên đề xuất từ paper FinBERT[cite: 14]:
+Mô hình được huấn luyện bằng cách sử dụng `Trainer` API từ thư viện Transformers. Các siêu tham số (hyperparameters) chính được lựa chọn dựa trên đề xuất từ paper FinBERT:
 
-* [cite_start]**Learning Rate:** `2e-5` [cite: 316]
+* **Learning Rate:** `2e-5` 
 * **Batch Size:** `16`
 * **Số Epochs:** `4`
 * **Weight Decay:** `0.01`
-* [cite_start]**Warmup Proportion:** `0.2` [cite: 316]
+* **Warmup Proportion:** `0.2` 
 
 ---
 
