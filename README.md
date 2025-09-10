@@ -4,7 +4,7 @@
 
 **FinBERT-VCSenti** là một mô hình học sâu được fine-tune từ `bert-base-uncased` để phân tích và phân loại quan điểm trong các văn bản tài chính bằng tiếng Anh. Mô hình có khả năng xác định xem một câu mang sắc thái **Tích cực (positive)**, **Tiêu cực (negative)**, hay **Trung lập (neutral)**, hỗ trợ các bài toán tự động hóa trong ngành tài chính - ngân hàng.
 
-[cite_start]Dự án này được thực hiện như một minh chứng về kỹ năng ứng dụng các mô hình Ngôn ngữ Lớn (LLM) vào giải quyết bài toán thực tế, lấy cảm hứng từ paper nghiên cứu **FinBERT**![Link Paper](https://arxiv.org/pdf/1908.10063)
+[cite_start]Dự án này được thực hiện như một minh chứng về kỹ năng ứng dụng các mô hình Ngôn ngữ Lớn (LLM) vào giải quyết bài toán thực tế, lấy cảm hứng từ paper nghiên cứu **FinBERT**[Link Paper](https://arxiv.org/pdf/1908.10063)
 
 
 ---
